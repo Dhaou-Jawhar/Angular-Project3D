@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OffreEmploiComponent } from './offre-emploi/offre-emploi.component';
 import { ErrorComponent } from './error/error.component';
+import { LogoComponent } from './3D-Component/logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ErrorComponent } from './error/error.component';
     ProductComponent,
     NavbarComponent,
     OffreEmploiComponent,
-    ErrorComponent
+    ErrorComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
