@@ -22,7 +22,7 @@ export class ProductPreviewComponent implements OnInit {
 
   constructor(private gltfLoaderService: NgtGLTFLoaderService) {}
 
-  cup$ = this.gltfLoaderService.load('assets/cup.glb');
+  cup$ = this.gltfLoaderService.load('assets/hoodie.glb');
 
   cupLoaded(object: Object3D) {
     this.cupMaterial = <MeshStandardMaterial>(<Mesh>object.getObjectByName('Object_2')).material;
@@ -35,11 +35,11 @@ export class ProductPreviewComponent implements OnInit {
 
   controlsReady(controls: NgtSobaOrbitControls) {
     const orbitControls = controls.controls;
-    orbitControls.enableZoom = false;
+    orbitControls.enableZoom = true;
     orbitControls.autoRotate = true;
     orbitControls.autoRotateSpeed = 10;
     const camera = orbitControls.object as PerspectiveCamera;
-    camera.zoom = 4.5;
+    camera.zoom = 10;
     camera.position.setY(4);
   }
 
