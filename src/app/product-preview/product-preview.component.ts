@@ -23,6 +23,7 @@ export class ProductPreviewComponent implements OnInit {
   constructor(private gltfLoaderService: NgtGLTFLoaderService) {}
 
   cup$ = this.gltfLoaderService.load('assets/hoodie.glb');
+  test$ = this.gltfLoaderService.load('assets/cup.glb');
 
   cupLoaded(object: Object3D) {
     this.cupMaterial = <MeshStandardMaterial>(<Mesh>object.getObjectByName('Object_2')).material;

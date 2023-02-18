@@ -14,13 +14,17 @@ import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { OffreEmploiComponent } from './offre-emploi/offre-emploi.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductPreviewComponent,
     ProductComponent,
-    NavbarComponent
+    NavbarComponent,
+    OffreEmploiComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

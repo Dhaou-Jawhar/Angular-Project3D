@@ -15,8 +15,7 @@
   <ngt-primitive
     *ngIf="cup$ | async as cup"
     [object]="cup.scene"
-    (ready)="cupLoaded($event)"
-  >
+    (ready)="cupLoaded($event)">
   </ngt-primitive>
   <ngt-soba-orbit-controls
     #controls="ngtSobaOrbitControls"
