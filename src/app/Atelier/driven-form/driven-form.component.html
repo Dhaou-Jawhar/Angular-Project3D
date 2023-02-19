@@ -34,26 +34,22 @@
                 </div>
                 <div class="form-group row pb-1">
                     <label style="display: inline-block;" class="col-sm-2 col-form-label"> Numero de Carte </label>
-                    <input style="display: inline-block; width: 50%;" type="text"  class="form-control" name="Numero"required maxlength="16" [(ngModel)]="carte.numero" #num="ngModel">
+                    <input style="display: inline-block; width: 50%;" type="number"  class="form-control" name="Numero" required  [(ngModel)]="carte.numero" #num="ngModel" max="16">
                     <div *ngIf="num.touched">
-                        <div *ngIf="num.errors?.['required']" class="alert alert-danger">L'Email est obligatoire</div>
-                        <div *ngIf="num.errors?.['pattern']" class="alert alert-danger">check the correct format</div>  
+                        <div *ngIf="num.errors?.['required']" class="alert alert-danger">Le Numero de la carte est obligatoire</div>
+                        <div *ngIf="num.errors?.['max']" class="alert alert-danger">u need 16 number</div>  
                     </div>
                 </div>
                 <div class="form-group row pb-1">
                     <label style="display: inline-block;" class="col-sm-2 col-form-label"> Date expiration </label>
-                    <input style="display: inline-block; width: 50%;" type="text"  class="form-control" name="date"required [(ngModel)]="carte.dateExp" #exp="ngModel">
+                    <input style="display: inline-block; width: 50%;" type="date"  class="form-control" name="date"required [(ngModel)]="carte.dateExp" #exp="ngModel">
                     <div *ngIf="exp.touched">
-                        <div *ngIf="exp.errors?.['required']" class="alert alert-danger">L'Email est obligatoire</div>
-                        <div *ngIf="exp.errors?.['pattern']" class="alert alert-danger">check the correct format</div>  
+                        <div *ngIf="exp.errors?.['required']" class="alert alert-danger">Date expiration est obligatoire</div>
                     </div>
                 </div>
                 <div class="form-group row pb-1">
                     <label style="display: inline-block;" class="col-sm-2 col-form-label"> Code </label>
-                    <input style="display: inline-block; width: 50%;" type="password"  class="form-control" name="code" [(ngModel)]="carte.code" #code="ngModel" length="16">
-                    <div *ngIf="code.touched">
-                        <div *ngIf="code.errors?.['length']" class="alert alert-danger">u need 16 number</div>  
-                    </div>
+                    <input style="display: inline-block; width: 50%;" type="number"  class="form-control" name="code" [disabled]="form2.invalid" >
                 </div>
             </form>
         </div>
