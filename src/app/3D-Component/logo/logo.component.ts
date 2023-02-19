@@ -22,7 +22,7 @@ export class LogoComponent implements OnInit {
 
   constructor(private gltfLoaderService: NgtGLTFLoaderService) {}
 
-  cup$ = this.gltfLoaderService.load('assets/camp_night.glb');
+  cup$ = this.gltfLoaderService.load('assets/room.glb');
 
   cupLoaded(object: Object3D) {
     this.cupMaterial = <MeshStandardMaterial>(<Mesh>object.getObjectByName('Object_2')).material;
@@ -39,7 +39,7 @@ export class LogoComponent implements OnInit {
     orbitControls.autoRotate = true;
     orbitControls.autoRotateSpeed = -1;
     const camera = orbitControls.object as PerspectiveCamera;
-    camera.zoom = 0.5;
+    camera.zoom = 1;
     camera.position.setY(4);
   }
 
