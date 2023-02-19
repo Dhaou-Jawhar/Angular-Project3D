@@ -17,6 +17,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { OffreEmploiComponent } from './offre-emploi/offre-emploi.component';
 import { ErrorComponent } from './error/error.component';
 import { LogoComponent } from './3D-Component/logo/logo.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { LogoComponent } from './3D-Component/logo/logo.component';
     NavbarComponent,
     OffreEmploiComponent,
     ErrorComponent,
-    LogoComponent
+    LogoComponent,
+    AddProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
