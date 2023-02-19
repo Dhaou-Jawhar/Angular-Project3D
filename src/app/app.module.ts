@@ -19,6 +19,7 @@ import { ErrorComponent } from './error/error.component';
 import { LogoComponent } from './3D-Component/logo/logo.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { DrivenFormComponent } from './Atelier/driven-form/driven-form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ErrorComponent,
     LogoComponent,
     AddProductComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    DrivenFormComponent
   ],
   imports: [
     BrowserModule,
