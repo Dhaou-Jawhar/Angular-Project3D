@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Emplois } from '../core/model/emploi';
+import { CalculService } from '../services/calcul.service';
 
 @Component({
   selector: 'app-offre-emploi',
@@ -13,15 +14,18 @@ export class OffreEmploiComponent implements OnInit {
   clickMessage = '';
   e!:Emplois;
   Result!:Emplois;
+  alertOffer!:number;
 
   
-  constructor() { }
+  constructor(private calcul:CalculService) { }
   ngOnInit(): void {
     this.listEmploi=[
       {reference : "1" , titre : "Responsable" , entreprise : "Actia" , etat : true},
       {reference : "2" , titre : "Ouvrier" , entreprise : "SOTUFAB" , etat : false},
       {reference : "3" , titre : "Directeur" , entreprise : "Hp" , etat : true}
     ]
+
+    this.alertOffer = this.calcul.getNumber(this.listEmploi , 'etat' , false)
   }
 
   Calcul() {
