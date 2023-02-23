@@ -24,12 +24,16 @@
     </div>
     </div>
     <div class="form-group">
+      <label>Model</label>
+      <input type="text" name="Model" class="form-control" placeholder="Object" [(ngModel)]="product.object">
+    </div>
+    <div class="form-group">
       <label>Price</label>
       <input type="number"  class="form-control" name="Price" placeholder="Enter Price" [(ngModel)]="product.price" required #price="ngModel">
       <div *ngIf="price.touched">
       <div *ngIf="price.errors" class="alert alert-danger">is is required</div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid" (click)="addProduct()">Add</button>
   </form>
   
