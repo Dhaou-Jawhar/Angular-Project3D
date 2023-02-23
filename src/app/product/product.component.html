@@ -4,6 +4,7 @@
     <br>
 
 
+
 <div class="row">
   <div class="col-md-4" *ngFor="let i of listProduct, let p=index">
       <div class="card" style="width: 18rem; text-align: center00; border-color: blue;">
@@ -15,8 +16,9 @@
               <p>Like : {{ i.like }}</p>
               <button class="btn btn-primary" (click)="like(p)">Like</button>
               <button class="btn btn-primary" (click)="buy(p)" [disabled]="i.quantity == 0" >Buy</button>
-              <!--<button class="btn btn-primary" [routerLink]="['/product',i.id]" >Details</button>-->             
+              <button class="btn btn-primary" [routerLink]="['/product',i.id]" >Details</button>         
           </div>
       </div>
   </div>
+  <h2>Alerte Stock = {{alertStock}} Produit de 0 quantity</h2>
 </div>

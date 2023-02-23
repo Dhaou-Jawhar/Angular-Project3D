@@ -38,7 +38,7 @@ export class ProductPreviewComponent implements OnInit {
   controlsReady(controls: NgtSobaOrbitControls) {
     const orbitControls = controls.controls;
     orbitControls.enableZoom = true;
-    orbitControls.autoRotate = false;
+    orbitControls.autoRotate = true;
     orbitControls.autoRotateSpeed = 10;
     const camera = orbitControls.object as PerspectiveCamera;
     camera.zoom = 10;
