@@ -10,6 +10,7 @@ import { ProductService } from '../services/product.service';
 export class ProductComponent implements OnInit {
 title:string = "This The Product"
 listProduct!:Product[];
+product!:Product;
 
   //injecter le service dans le constructeur
   constructor(private service: ProductService) { }
