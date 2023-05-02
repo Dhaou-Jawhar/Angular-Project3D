@@ -6,7 +6,8 @@
     "start": "cross-env NODE_ENV=development ng serve",
     "build": "cross-env NODE_ENV=production ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "install": ""
   },
   "private": true,
   "dependencies": {
